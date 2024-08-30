@@ -11,7 +11,7 @@ from dash import dcc  # dash core components
 from dash import html # dash html components
 import plotly.express as px
 import pandas as pd
-
+from numpy import random as rm
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -19,20 +19,27 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
 # en este primer ejemplo usamos unos datos de prueba que creamos directamente
-# en un dataframe de pandas 
+# en un dataframe de pandas
+
+rm.seed(seed=1)
+
 df = pd.DataFrame({
-    "Fiebre": ["Moderada", "Leve", "Alta", "Moderada", "Leve", "Alta"],
-    "Casos": [4, 1, 2, 2, 4, 5],
-    "Diagnóstico": ["Positivo", "Positivo", "Positivo", "Negativo", "Negativo", "Negativo"]
+    "Trimestre": ["Q1", "Q2", "Q3", "Q4", "Q1", "Q2", "Q3", "Q4"],
+    "Ventas (und)": [round(rm.normal(250,20)), round(rm.normal(400,10)), round(rm.normal(700,100)), round(rm.normal(1500,200)), 
+              round(rm.normal(100,5)), round(rm.normal(200,20)), round(rm.normal(300,50)), round(rm.normal(500,10))],
+    "Producto": ["Manzana", "Manzana", "Manzana", "Manzana", "Mandarina", "Mandarina", "Mandarina", "Mandarina"]
 })
 
-fig = px.bar(df, x="Fiebre", y="Casos", color="Diagnóstico", barmode="group")
+fig = px.bar(df, x="Trimestre", y="Ventas (und)", color="Producto", barmode="group", color_discrete_map={
+        'Manzana': '#fe2e2e',
+        'Mandarina': '#fb8b24'
+    })
 
 app.layout = html.Div(children=[
-    html.H1(children='Mi primer tablero en Dash'),
+    html.H1(children='Tablero de Ventas'),
 
     html.Div(children='''
-        Histograma de casos según síntomas y diagnóstico
+        Histograma de ventas de manzana y mandarina por trimestre
     '''),
 
     dcc.Graph(
@@ -40,7 +47,7 @@ app.layout = html.Div(children=[
         figure=fig
     ),
     html.Div(children='''
-        En este gráfico se observa el número de casos positivos y negativos para COVID-19 según síntomas de fiebre.
+        En este gráfico se observa el número de de unidades vendidas de manzanas y mandarina por trimestre.
     '''),
     html.Div(
         className="Columnas",
@@ -52,4 +59,7 @@ app.layout = html.Div(children=[
 )
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8050)
+
+#python .\Taller4_AWS\base\app1.py
+#.\venv.AC\Scripts\activate
