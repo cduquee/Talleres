@@ -17,6 +17,13 @@ Repositorio creado para subir talleres del curso de **Analítica Computacional p
 - Crear un tablero de datos usando Dash (dash)
 - Desplegar tablero en una instancia EC2 en Amazon Web Services (AWS)
 
+## Taller 5: Socket & AWS Pricing 🔌
+- Crear una conexión cliente y servidor Transmission Control Protocol (TCP) a través de un socket
+- Aprender a usar la calculadora AWS para estimar costos de servicios en la nube
+      
+# Autores
+- Camilo Duque - 2020242829
+- Sofia Buitrago - 202020742 <br>
 <br>
+Universidad de los Andes &copy; 2024
 
-Universidad de los Andes &copy; 2024 | by Camilo Duque :hearts:
