@@ -9,7 +9,7 @@ Repositorio creado para subir talleres del curso de **Analítica Computacional p
 - Aprender a usar funciones básicas en Git (commit, push, pull, merge, etc.)
 - Subir repositorio local a la nube en Github
 
-## Taller 3: Machine Learning 🧠
+## Taller 3: Machine Learning 💻
 - Exploratory Data Anlayisis (EDA)
 - Modelos de aprendizaje automático basicos (scikit-learn)
 
@@ -20,7 +20,11 @@ Repositorio creado para subir talleres del curso de **Analítica Computacional p
 ## Taller 5: Socket & AWS Pricing 🔌
 - Crear una conexión cliente y servidor Transmission Control Protocol (TCP) a través de un socket
 - Aprender a usar la calculadora AWS para estimar costos de servicios en la nube
-      
+
+## Taller 6: Redes Neuronales 🧠
+- 3 Modelos de Redes Neuronales modificando nómero de neuronas y capas
+- Funciones de Activación
+  
 # Autores
 - Camilo Duque - 2020242829
 - Sofia Buitrago - 202020742 <br>
