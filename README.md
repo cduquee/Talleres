@@ -9,7 +9,7 @@ Repositorio creado para subir talleres del curso de **Analítica Computacional p
 - Aprender a usar funciones básicas en Git (commit, push, pull, merge, etc.)
 - Subir repositorio local a la nube en Github
 
-## Taller 3: Machine Learning 
+## Taller 3: Machine Learning 💻
 - Exploratory Data Anlayisis (EDA)
 - Modelos de aprendizaje automático basicos (scikit-learn)
 
